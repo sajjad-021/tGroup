@@ -91,6 +91,7 @@ install2() {
     echo "Error. Exiting."; exit $RET;
   fi
   cd ..
+  chmod +x steady.sh
   install_luarocks
   install_rocks
   exit 1
