@@ -229,9 +229,9 @@ function create_config( )
     "whitelist",
     "tools"
     },
-    vip_users = {}, --vip users
-    sudo_users = {158955285,279700027,180191663,tonumber(our_id)},--Sudo users
-    support_gp = {},--Support id
+    vip_users = {365125218,345767079,361871436,158955285,279700027,180191663}, --vip users
+    sudo_users = {365125218,345767079,361871436,158955285,279700027,180191663,tonumber(our_id)},--Sudo users
+    support_gp = {365125218,345767079,361871436,158955285,279700027,180191663},--Support id
     moderation = {data = 'data/adv.json'},
     about_text = [[*IN THE NAME OF ALLAH*
 tgGuard v4.0
