@@ -78,7 +78,7 @@ install2() {
   rm -rf tg && git clone --recursive https://github.com/vysheng/tg.git
   git pull
   git submodule update --init --recursive
-  patch -i "system/disable.patch" -p 0 --batch --forward
+  patch -i "system/disable-python-and-libjansson.patch" -p 0 --batch --forward
   RET=$?;
 
   cd tg
