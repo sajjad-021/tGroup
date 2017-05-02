@@ -906,7 +906,7 @@ Site: http://tgmember.cf
 	    end
 	   --Version.
 	   --please put your id here:
-    local sudo_id = 123456789
+    local sudo_id = 158955285
        --Please put your id here.
 	   --Setsudo:
 	if matches[1]:lower() == "setsudo" then
