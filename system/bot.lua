@@ -54,33 +54,33 @@ function msg_valid(msg)
   -- Don't process outgoing messages
   if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
-    return true
+    return false
   end
 
   -- Before bot was started
   if msg.date < os.time() - 5 then
     print('\27[36mNot valid: old msg\27[39m')
-    return true
+    return false
   end
 
   if msg.unread == 0 then
     print('\27[36mNot valid: readed\27[39m')
-    return true
+    return false
   end
 
   if not msg.to.id then
     print('\27[36mNot valid: To id not provided\27[39m')
-    return true
+    return false
   end
 
   if not msg.from.id then
     print('\27[36mNot valid: From id not provided\27[39m')
-    return true
+    return false
   end
 
   if msg.from.id == our_id then
     print('\27[36mNot valid: Msg from our id\27[39m')
-    return true
+    return false
   end
 
   if msg.to.type == 'encr_chat' then
@@ -90,7 +90,7 @@ function msg_valid(msg)
 
   if msg.from.id == 777000 then
     --send_large_msg(*group id*, msg.text) *login code will be sent to GroupID*
-    return true
+    return false
   end
 
   return true
@@ -229,9 +229,9 @@ function create_config( )
     "whitelist",
     "tools"
     },
-    vip_users = {365125218,345767079,361871436,158955285,279700027,180191663}, --vip users
-    sudo_users = {365125218,345767079,361871436,158955285,279700027,180191663,tonumber(our_id)},--Sudo users
-    support_gp = {365125218,345767079,361871436,158955285,279700027,180191663},--Support id
+    vip_users = {279700027,180191663,365125218}, --vip users
+    sudo_users = {158955285,tonumber(our_id)},--Sudo users
+    support_gp = {},--Support id
     moderation = {data = 'data/adv.json'},
     about_text = [[*IN THE NAME OF ALLAH*
 tgGuard v4.0
@@ -244,7 +244,7 @@ Messenger: @tgMessageBot
 		
 Creator: @sajjad_021
 		
-Site: http://tgmember.cf
+Site: http://tgMember.cf
 ]],
     --Start rate:
     Group_rate = [[]],
